@@ -1,7 +1,12 @@
 import React, { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
+import { addToCart } from './store/actions/singleAction';
+import { useDispatch } from "react-redux";
+
+
 
 const SingleProduct = ()=>{
+ const dispatch = useDispatch();   
  const {id} = useParams()
  const [product,setProduct] = useState(null)
     useEffect(()=>{
@@ -10,7 +15,10 @@ const SingleProduct = ()=>{
         .then((response)=>setProduct(response))
     },[]);
 
-    
+    const handleAddToCart = () => {
+        dispatch(addToCart(product));
+    };
+
 
     return(
         <div className="singleProductCard">
@@ -25,6 +33,7 @@ const SingleProduct = ()=>{
                     <p className="singleProductDetails">Description: {product?.description}</p>
                     <p className="singleProductDetails">Rating: {product?.rating?.rate} 
                     ({product?.rating?.count} reviews)</p>
+                    <button onClick={handleAddToCart}>Add to Cart</button>
                 </div>
             </div>
         </div>    

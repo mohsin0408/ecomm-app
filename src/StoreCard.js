@@ -2,6 +2,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 
 const StoreCard = ({product})=>{
+
     return(
     <Link to={`/product/${product.id}`} >
         <div className="cards">
