@@ -216,7 +216,6 @@ h1{
   
 }
 
-/* For very small mobile phones */
 @media (max-width: 390px) {
   .store {
     grid-template-columns: 1fr;
