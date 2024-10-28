@@ -4,11 +4,11 @@ import { Link } from "react-router-dom";
 const StoreCard = ({product})=>{
 
     return(
-    <Link to={`/product/${product.id}`} >
-        <div className="cards">
+    <Link to={`/product/${product.id}`} className="storeCardDetails" >
+        <div className="cards light-mode">
             <img src={product.image} className="card-img" />
-            <p>{product.title}</p>
-            <p>Price-{product.price}</p>
+            <p >{product.title}</p>
+            <p >Price-{product.price}</p>
         </div>
     </Link>
     )

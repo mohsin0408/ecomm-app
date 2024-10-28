@@ -1,4 +1,4 @@
-// src/store/store.js
+
 import { createStore } from 'redux';
 
 const initialState = {
@@ -30,7 +30,7 @@ const rootReducer = (state = initialState, action) => {
                     darkMode: !state.theme.darkMode,
                 },
             };
-        case 'SET_SORT_OPTION': // Add this case
+        case 'SET_SORT_OPTION': 
             return {
                 ...state,
                 sortOption: action.payload,
@@ -54,3 +54,27 @@ const rootReducer = (state = initialState, action) => {
 const store = createStore(rootReducer);
 
 export default store;
+
+export const setProducts = (products) => ({
+    type: 'SET_PRODUCTS',
+    payload: products,
+});
+
+export const toggleTheme = () => ({
+    type: 'TOGGLE_THEME',
+});
+
+export const setSortOption = (option) => ({
+    type: 'SET_SORT_OPTION',
+    payload: option,
+});
+
+export const addToCart = (product) => ({
+    type: 'ADD_TO_CART',
+    payload: product,
+});
+
+export const removeFromCart = (productId) => ({
+    type: 'REMOVE_FROM_CART',
+    payload: productId,
+});

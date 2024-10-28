@@ -4,6 +4,10 @@
   box-sizing: border-box;
 }
 
+h1{
+  font-size: 30px;
+}
+
 .store{
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
@@ -30,4 +34,81 @@
 .dark-mode {
   background-color: black;
   color: white;
+}
+.singleProductCard{
+  width: 100%;
+  height: 100vh;
+  background: #e2e2e345;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.singleProductInnerCard{
+  width: 85%;
+  height: 85vh;
+  background-color: #f4f4f4;
+  box-shadow: 5px 5px 25px -5px rgba(0, 0, 0, 0.5);
+  border-radius: 15px;
+  padding: 20px;
+}
+
+.singleProductImage{
+  width: 35%;
+  height: 300px;
+}
+
+.singleProductDetails{
+  text-align: left;
+  padding: 0 130px;
+  font-size: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  margin-bottom: 15px;
+}
+
+.cardButton{
+  border: 1px solid white ;
+  font-size: 18px;
+  padding: 10px;
+  border-radius: 5px;
+  cursor: pointer;
+  color: white;
+  background-color: rgb(64, 63, 63);
+}
+
+.header{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 30px;
+  margin: 6px 20px;
+}
+
+.ToggleIcon{
+  font-size: 45px;
+}
+
+.cart{
+  text-decoration: none;
+  color: black;
+  border: 1px solid black;
+  padding: 4px;
+  border-radius: 4px;
+}
+
+.sortingOptions{
+  color: black;
+  border: 1px solid black;
+  padding: 5px;
+  border-radius: 4px;
+  margin-right: 20px;
+}
+
+.storeCardDetails{
+  text-decoration: none;
+  font-size: 18px;
+  color: black;
 }

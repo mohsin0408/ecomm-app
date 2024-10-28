@@ -1,5 +1,5 @@
 import React from "react";
-import { BrowserRouter as Router,Routes, Route ,Link} from "react-router-dom";
+import { BrowserRouter as Router,Routes, Route } from "react-router-dom";
 import { Provider } from 'react-redux';
 import store from './store/Store';
 import Products from "./Products";
@@ -12,7 +12,6 @@ const App = () => {
         <Provider store={store}>
             <Router>
                 <div>
-                    <Link to="/cart">Cart</Link>
                     <Routes>
                         <Route path="/" element={<Products />} />
                         <Route path="/storecard" element={<StoreCard />} />

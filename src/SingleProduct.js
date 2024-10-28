@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
-import { addToCart } from './store/actions/singleAction';
+import { addToCart } from './store/Store';
 import { useDispatch } from "react-redux";
 
 
@@ -26,15 +26,15 @@ const SingleProduct = ()=>{
                 <div>
                     <img src={product?.image} className="singleProductImage"/>
                 </div>
-                <div>
-                    <p className="singleProductDetails">Price: {product?.price}</p>
-                    <p className="singleProductDetails">Title: {product?.title}</p>
-                    <p className="singleProductDetails">Category: {product?.category}</p>
-                    <p className="singleProductDetails">Description: {product?.description}</p>
-                    <p className="singleProductDetails">Rating: {product?.rating?.rate} 
+                <div className="singleProductDetails">
+                    <p>Price: {product?.price}</p>
+                    <p>Title: {product?.title}</p>
+                    <p>Category: {product?.category}</p>
+                    <p>Description: {product?.description}</p>
+                    <p>Rating: {product?.rating?.rate} 
                     ({product?.rating?.count} reviews)</p>
-                    <button onClick={handleAddToCart}>Add to Cart</button>
                 </div>
+                <button onClick={handleAddToCart} className="cardButton" >Add to Cart</button>
             </div>
         </div>    
         )
