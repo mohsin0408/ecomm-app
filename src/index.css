@@ -524,134 +524,24 @@ h1{
   }
 }
 
+@media screen and (max-width: 590px){
 
-
-/* MEDIA QUERIES */
-
-/* @media (max-width:1000px){
-  .store{
-    grid-template-columns: repeat(3, 1fr);
-    gap: 8px;
-    padding: 13px;
+  .card-img {
+    width: 320px;
+    height: 260px;
   }
-  .singleProductCard {
-    height: auto;
+  .cardButton{
+    width: 35%;
   }
-  .singleProductInnerCard {
-    width: 80%;
-    height: auto;
-    padding: 10px;
-    margin: 20px;
-  }
-  .cards{
-    padding: 20px;
-  }
-  .card-img{
-    width: 90%;
-    height: 176px;
-  }
-}
-
-@media (max-width: 768px) {
-  .store {
-    grid-template-columns: repeat(2, 1fr);
-    gap: 10px;
-  }
-
-  .singleProductCard {
-    height: auto;
-  }
-
-  .singleProductInnerCard {
-    width: 95%;
-    height: auto;
-    padding: 10px;
-  }
-
   .singleProductImage {
-    width: 65%;
+    width: 300px;
+    height: 260px;
   }
-
-  .singleProductDetails {
-    padding: 0 20px;
-    font-size: 18px;
-  }
-
-  .header {
-    flex-direction: row;
-    align-items: center;
-    gap: 10px;
-    margin: 8px 20px;
-  }
-
-  .cardButton {
+  .cartDetails{
     font-size: 16px;
-    padding: 8px;
   }
-
-  h1 {
-    font-size: 30px;
-  }
-}
-
-@media (max-width: 580px) {
-  h1 {
-    font-size: 20px;
+  .cart-item-img {
+    width: 130px;
+    height: 100px;
   }
 }
-
-@media (max-width: 496px) {
-  .store {
-    grid-template-columns: 1fr;
-  }
-
-  .header {
-    gap: 5px;
-  }
-
-  h1{
-    font-size: 18px;
-  }
-
-  .cardButton {
-    width: 100%;
-  }
-  .ToggleIcon{
-    font-size: 35px;
-  }
-  .sortingOptions{
-    width: 25px;
-  }
-  .card-img{
-    width: 100%;
-  }
-  
-}
-
-@media (max-width: 390px) {
-  .store {
-    grid-template-columns: 1fr;
-    padding: 0 13px;
-  }
-  .singleProductImage{
-    width: 85%;
-    height: 200px;
-  }
-  .singleProductDetails {
-    padding: 0 20px;
-    font-size: 15px;
-  }
-  h1{
-    font-size: 18px;
-  }
-  .cart{
-    font-size: 12px;
-  }
-  .header {
-    gap: 5px;
-  }
-
-  .cardButton {
-    width: 100%;
-  }
-} */
