@@ -524,7 +524,7 @@ h1{
   }
 }
 
-@media screen and (max-width: 590px){
+@media screen and (max-width: 375px){
 
   .card-img {
     width: 320px;
