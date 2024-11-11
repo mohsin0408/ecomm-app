@@ -1,12 +1,8 @@
 import React, { useEffect } from "react";
 import StoreCard from "./StoreCard";
-import { IoToggleSharp } from "react-icons/io5";
 import { useDispatch, useSelector } from "react-redux";
 import { setProducts } from './store/Store.js';
-import { toggleTheme } from './store/Store.js';
 import { setSortOption } from './store/Store.js';
-import { Link } from "react-router-dom";
-
 
 const Products = () => {
     const dispatch = useDispatch();
@@ -14,7 +10,6 @@ const Products = () => {
     const darkMode = useSelector((state) => state.theme.darkMode);
     const sortOption = useSelector((state) => state.sortOption); 
 
-    
     useEffect(() => {
         fetch('https://fakestoreapi.com/products')
             .then((data) => data.json())
@@ -37,18 +32,13 @@ const Products = () => {
     };
 
     return (
-        <div className={darkMode ? "dark-mode" : "light-mode"}>
-            <div className="header" >
-            <IoToggleSharp className="ToggleIcon" onClick={() => dispatch(toggleTheme())} />
-                <h1>WELCOME BACK</h1>
-                <span>
+        <div className={darkMode ? "dark-mode" : "light-mode"} >
+            <div className="second-header" >
                 <select onChange={handleSortChange} value={sortOption} className="sortingOptions" >
                     <option value="normal">Normal</option>
                     <option value="low-to-high">Price: Low to High</option>
                     <option value="high-to-low">Price: High to Low</option>
-                </select>
-                <Link to="/cart" className="cart light-mode" > Go to Cart</Link>
-                </span>
+                </select>  
             </div>
             <div className="store">
             {sortedProducts().map((item) => (

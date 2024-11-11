@@ -5,15 +5,15 @@ const StoreCard = ({product})=>{
 
     return(
     <Link to={`/product/${product.id}`} className="storeCardDetails" >
-        <div className="cards light-mode">
+        <div className="cards ">
             <img src={product.image} className="card-img" />
-            <p >{product.title}</p>
-            <p >Price-{product.price}</p>
+            <p>{product.title}</p>
+            <p>Price-{product.price}</p>
         </div>
     </Link>
     )
 }
 
-export default StoreCard
+export default StoreCard;
 
 

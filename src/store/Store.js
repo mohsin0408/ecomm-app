@@ -36,11 +36,32 @@ const rootReducer = (state = initialState, action) => {
                 sortOption: action.payload,
             };
 
+       
+
         case 'ADD_TO_CART':
-            return {
-                ...state,
-                cart: [...state.cart, action.payload],
-            };
+    const existingProductIndex = state.cart.findIndex(item => item.id === action.payload.id);
+
+    if (existingProductIndex !== -1) {
+        // Product already in cart, increase quantity
+        const updatedCart = [...state.cart];
+        updatedCart[existingProductIndex].quantity += 1;
+        return {
+            ...state,
+            cart: updatedCart,
+        };
+    } else {
+        // Product not in cart, add to cart with quantity of 1
+        const productWithQuantity = {
+            ...action.payload,
+            quantity: 1,
+        };
+        return {
+            ...state,
+            cart: [...state.cart, productWithQuantity],
+        };
+    }
+
+
         case 'REMOVE_FROM_CART':
             return {
                 ...state,
